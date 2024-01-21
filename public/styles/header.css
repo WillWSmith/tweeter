@@ -1,0 +1,22 @@
+header {
+  height: 520px;
+  width: 100%;
+  background-image: url("/images/header-background.png");
+  background-size: auto;
+  background-position: center;
+  background-color: orange;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding-top: 5.0em;
+}
+
+.user-name {
+  font-size: 2.0em;
+  color: white;
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+}
