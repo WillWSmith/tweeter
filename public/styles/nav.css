@@ -23,12 +23,13 @@ nav span {
   align-items: center;
 }
 
-.new-tweet {
-  display: flex;
-}
-
 .bold-text {
   font-weight: bold;
+}
+
+.bold-text-nav {
+  font-weight: bold;
+  font-family: "Source Sans 3", sans-serif;
 }
 
 .arrows {
