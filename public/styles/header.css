@@ -1,4 +1,4 @@
-header {
+header.user-header {
   height: 520px;
   width: 100%;
   background-image: url("/images/header-background.png");
@@ -13,7 +13,7 @@ header {
   padding-top: 5.0em;
 }
 
-.user-name {
+header .user-name {
   font-size: 2.0em;
   color: white;
   font-weight: normal;
