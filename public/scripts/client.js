@@ -53,6 +53,20 @@ renderTweets([]);
 
   $('#tweet-form').submit(function(event) {
     event.preventDefault();
+
+    // Validate tweet length
+    const tweetContent = $('#tweet-text').val();
+    
+    if (tweetContent.length === 0) {
+      alert('Tweet cannot be empty!');
+      return;
+    }
+
+    if (tweetContent.length > 140) {
+      alert('Tweet cannot be more than 140 characters!');
+      return;
+    }
+    // End of validation
     
     console.log('Form submitted, performing AJAX call...');
 
