@@ -17,6 +17,9 @@ const renderTweets = function(tweets) {
 
 const createTweetElement = function(tweet) {
   const formattedTimestamp = timeago.format(tweet.created_at);
+
+  const escapedText = $('<div>').text(tweet.content.text).html();
+
   let $tweet = $(`
     <article class="tweet">
       <header>
@@ -31,7 +34,7 @@ const createTweetElement = function(tweet) {
         <p class="user-account">${tweet.user.handle}</p>
       </header>
       <div class="content-mid">
-        <p>${tweet.content.text}</p>
+        <p>${escapedText}</p>
       </div>
       <footer>
         <div class="footer-left">
