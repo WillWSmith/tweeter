@@ -75,3 +75,26 @@ const createTweetElement = function(tweet) {
 renderTweets(data);
 
 });
+
+$(document).ready(function() {
+  $('#tweet-form').submit(function(event) {
+    event.preventDefault();
+    
+    console.log('Form submitted, performing AJAX call...');
+
+    const tweetData = $(this).serialize();
+    console.log(`Tweet Data:`, tweetData);
+
+    $.ajax({
+      url: '/tweets',
+      method: 'POST',
+      data: tweetData,
+      success: function(response) {
+        console.log('Success!', response);
+      },
+      error: function(error) {
+        console.log('Error!', error);
+      }
+    });
+  });
+});
