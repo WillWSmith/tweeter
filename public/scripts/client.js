@@ -57,16 +57,18 @@ renderTweets([]);
   $('#tweet-form').submit(function(event) {
     event.preventDefault();
 
+    $('#error-message').slideUp();
+
     // Validate tweet length
     const tweetContent = $('#tweet-text').val();
     
     if (tweetContent.length === 0) {
-      alert('Tweet cannot be empty!');
+      $('#error-message').text('Tweet cannot be empty!').slideDown();
       return;
     }
 
     if (tweetContent.length > 140) {
-      alert('Tweet cannot be more than 140 characters!');
+      $('#error-message').text('Tweet cannot be more than 140 characters!').slideDown();
       return;
     }
     // End of validation
