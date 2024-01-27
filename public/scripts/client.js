@@ -9,9 +9,9 @@ const renderTweets = function(tweets) {
   const $tweetsContainer = $('#tweets-container');
   $tweetsContainer.empty();
 
-  tweets.forEach((tweet) => {
+  tweets.reverse().forEach((tweet) => {
     const $tweet = createTweetElement(tweet);
-    $tweetsContainer.append($tweet);
+    $tweetsContainer.prepend($tweet);
   });
 };
 
@@ -67,7 +67,7 @@ renderTweets([]);
       return;
     }
     // End of validation
-    
+
     console.log('Form submitted, performing AJAX call...');
 
     const tweetData = $(this).serialize();
@@ -79,6 +79,10 @@ renderTweets([]);
       data: tweetData,
       success: function(response) {
         console.log('Success!', response);
+
+        $('#tweet-text').val('');
+
+        loadTweets();
       },
       error: function(error) {
         console.log('Error!', error);
@@ -92,7 +96,10 @@ renderTweets([]);
       method: 'GET',
       success: function(response) {
         console.log('Success!', response);
-        renderTweets(response);
+
+        const reversedTweets = response.reverse();
+
+        renderTweets(reversedTweets);
       },
       error: function(error) {
         console.log('Error!', error);
