@@ -118,3 +118,38 @@ footer .footer-right i:hover {
   display: flex;
   flex-direction: column;
 }
+
+/* .error-message {
+  color: #fff;
+  background-color: #e74c3c;
+  border: 1px solid #c0392b;
+  padding: 15px;
+  margin-bottom: 20px;
+  display: none;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 10px;
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+} */
+
+.error-message {
+  color: #fff;
+  background-color: #e74c3c;
+  border: 1px solid #c0392b;
+  padding: 15px;
+  margin-bottom: 20px;
+  display: none;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 10px;
+}
