@@ -1,32 +1,22 @@
 $(document).ready(function() {
   let tweetAreaVisible = false;
   const $newTweet = $('.new-tweet');
+  const $arrows = $('.arrows');
 
-  $newTweet.hide(); // Hide the new-tweet element initially
+  $newTweet.hide();
 
   $('.nav-content-right').click(function() {
     if (!tweetAreaVisible) {
-      // If the tweet area is not visible, slide it down
       $newTweet.slideDown('fast', function() {
-        // Enable textarea after the animation completes
-        $('#tweet-text').prop('disabled', function(i, value) {
-          return !value;
-        });
-
-        // Focus on the textarea after sliding down
-        if (!$('#tweet-text').prop('disabled')) {
-          $('#tweet-text').focus();
-        }
+        $('#tweet-text').prop('disabled', false).focus();
+        $arrows.addClass('rotate');
       });
 
       tweetAreaVisible = true;
     } else {
-      // If the tweet area is visible, slide it up
       $newTweet.slideUp('fast', function() {
-        // Disable textarea after the animation completes
-        $('#tweet-text').prop('disabled', function(i, value) {
-          return !value;
-        });
+        $('#tweet-text').prop('disabled', false);
+        $arrows.removeClass('rotate');
       });
 
       tweetAreaVisible = false;
