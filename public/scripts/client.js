@@ -59,7 +59,6 @@ renderTweets([]);
 
     $('#error-message').slideUp();
 
-    // Validate tweet length
     const tweetContent = $('#tweet-text').val();
     
     if (tweetContent.length === 0) {
@@ -71,7 +70,6 @@ renderTweets([]);
       $('#error-message').text('Tweet cannot be more than 140 characters!').slideDown();
       return;
     }
-    // End of validation
 
     console.log('Form submitted, performing AJAX call...');
 
@@ -86,6 +84,8 @@ renderTweets([]);
         console.log('Success!', response);
 
         $('#tweet-text').val('');
+
+        $('.counter').text('140');
 
         loadTweets();
       },
