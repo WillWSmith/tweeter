@@ -14,7 +14,7 @@ Tweeter is a simple, single-page Twitter clone that uses jQuery, HTML5 and plain
 
 Welcome to Tweeter, your one page twitter clone! Look at this toggleable "Write a new tweet" feature. Also easy access back to the top of the page with the handy scroll to top button! 😲
 
-!["Welcome to Tweeter! Look at these toggle features!"](/public/images/README/welcome-toggles.mp4)
+!["Welcome to Tweeter! Look at these toggle features!"](https://github.com/WillWSmith/tweeter/blob/master/public/images/README/welcome-toggles.gif)
 
 Uh-oh! Looks like we forgot to type out our great idea. ☹
 
@@ -22,7 +22,7 @@ Uh-oh! Looks like we forgot to type out our great idea. ☹
 
 Look at the resizability!
 
-!["Resposive Design"](/public/images/README/responsive-design.mp4)
+!["Resposive Design"](https://github.com/WillWSmith/tweeter/blob/master/public/images/README/responsive-design.gif)
 
 ## Dependencies
 
