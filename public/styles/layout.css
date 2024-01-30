@@ -29,6 +29,7 @@ body {
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: italic;
+  margin: 0;
  }
 
 nav span {
@@ -37,8 +38,94 @@ nav span {
   font-style: normal;
  }
 
-main {
-  width: 90%;
-  margin: 0 auto;
+.container {
+  width: 100%;
   background-color: inherit;
+  padding-top: 80px;
+}
+
+.tweets-container-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.new-tweet {
+  width: 100%;
+  margin-top: 10px;
+}
+
+#tweets-container {
+  width: 100%;
+}
+
+/* Desktop styles */
+@media screen and (min-width: 1024px) {
+  nav {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .nav-content-right {
+    flex-direction: row;
+  }
+
+  .nav-content-right:hover .nav-new-tweet {
+    color: #b3b3b3;
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 2em;
+  }
+
+  header.user-header {
+    flex-basis: 30%;
+    align-self: flex-start;
+    margin-top: 3.5em;
+  }
+  .tweets-container-wrapper,
+  .new-tweet {
+    flex-basis: 60%;
+  }
+
+  #tweets-container {
+    width: 90%;
+  }
+}
+
+/* Tablet styles */
+@media screen and (max-width: 1023px) {
+  nav {
+    background-color: transparent !important;
+  }
+  .nav-content-right {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding-top: 0;
+  }
+
+  header.user-header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tweets-container-wrapper {
+    width: 90%;
+  }
+
+  .new-tweet {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 }

@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: center;
   margin-top: 10px;
+  width: 100%;
 }
 
 .new-tweet header h2 {
@@ -32,7 +33,7 @@
 }
 
 textarea {
-  width: 600px;
+  width: 940px;
   height: 90px;
   border: none;
   border-bottom: 3px solid rgb(90, 90, 90);
@@ -102,8 +103,32 @@ footer .footer-right i {
 }
 
 footer .footer-right i:hover {
-  color: rgb(179, 130, 26);
+  color: darkred;
   margin-right: 5px;
+}
+
+footer .icon.far.fa-heart {
+  color: rgb(99, 99, 235);
+}
+
+footer .icon.fas.fa-heart {
+  color: red;
+  animation: firework 1s ease;
+}
+
+@keyframes firework {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
 }
 
 .content-mid p {
@@ -118,29 +143,6 @@ footer .footer-right i:hover {
   display: flex;
   flex-direction: column;
 }
-
-/* .error-message {
-  color: #fff;
-  background-color: #e74c3c;
-  border: 1px solid #c0392b;
-  padding: 15px;
-  margin-bottom: 20px;
-  display: none;
-  border-radius: 5px;
-  text-align: center;
-  margin-top: 10px;
-  opacity: 0;
-  animation: fadeIn 0.5s ease-in-out forwards;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-} */
 
 .error-message {
   color: #fff;
