@@ -21,6 +21,7 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
+  //Update tweet counter on input
   $(".new-tweet form textarea").on("input", function() {
     let textLength = $(this).val().length;
     let maxChars = 140;

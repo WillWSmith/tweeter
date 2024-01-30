@@ -4,6 +4,7 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 $(document).ready(function() {
+  //renders tweets
 const renderTweets = function(tweets) {
   const $tweetsContainer = $('#tweets-container');
   $tweetsContainer.empty();
@@ -13,7 +14,7 @@ const renderTweets = function(tweets) {
     $tweetsContainer.prepend($tweet);
   });
 };
-
+  //Function to create HTML for tweet
 const createTweetElement = function(tweet) {
   const formattedTimestamp = timeago.format(tweet.created_at);
 
@@ -50,13 +51,13 @@ const createTweetElement = function(tweet) {
 
   return $tweet;
 };
-
+  //Event listener for heart icon click
 $(document).on('click', '#heart-icon', function() {
   $(this).toggleClass('far fas');
   $(this).toggleClass('bright-red', $(this).hasClass('fas'));
   playSound();
 });
- 
+ //Function to play sound when heart icon is clicked
 function playSound() {
   const audio = new Audio('/images/heart-sound.mp3');
   audio.volume = 0.075;
@@ -64,7 +65,7 @@ function playSound() {
 }
 
 renderTweets([]);
-
+  //Event listener for tweet form submission
   $('#tweet-form').submit(function(event) {
     event.preventDefault();
 
@@ -105,7 +106,7 @@ renderTweets([]);
       }
     });
   });
-
+  //Function to load tweets
   const loadTweets = function() {
     $.ajax({
       url: '/tweets',
@@ -122,6 +123,6 @@ renderTweets([]);
       }
     });
   }
-
+  //Initial load of tweets
   loadTweets();
 });

@@ -4,7 +4,7 @@ $(document).ready(function() {
   const $arrows = $('.arrows');
 
   $newTweet.hide();
-
+  // Event listener for new tweet button click
   $('.nav-content-right').click(function() {
     if (!tweetAreaVisible) {
       $newTweet.slideDown('fast', function() {

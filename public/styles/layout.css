@@ -39,15 +39,18 @@ nav span {
  }
 
 .container {
-  width: 100%;
+  width: 90%;
   background-color: inherit;
   padding-top: 80px;
+  display: flex;
+  align-items: center;
 }
 
 .tweets-container-wrapper {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  margin-top: 60px;
 }
 
 .new-tweet {
@@ -92,7 +95,7 @@ nav span {
   }
 
   #tweets-container {
-    width: 90%;
+    width: 100%;
   }
 }
 
