@@ -41,7 +41,7 @@
   </head>
 
   <body>
-    <nav>
+    <nav class="nav-container">
       <span class="logo">tweeter</span>
       <div class="nav-content-right">
         <div class="nav-new-tweet">
@@ -50,16 +50,17 @@
         <div class="arrows"><i class="fas fa-angle-double-down"></i></div>
       </div>
     </nav>
-    <header class="user-header">
-      <div>
-        <img src="/images/profile-hex.png">
-      </div>
-      <div class="user-name">
-        <div class="bold-text">Will</div>&nbsp;Smith
-      </div>
-    </header>
-    <!-- Page-specific (main) content here -->
     <main class="container">
+      <header class="user-header">
+        <div>
+          <img src="/images/profile-hex.png">
+        </div>
+        <div class="user-name">
+          <div class="bold-text">Will</div>&nbsp;Smith
+        </div>
+      </header>
+    <!-- Page-specific (main) content here -->
+    <div class="tweets-container-wrapper">
       <section class="new-tweet">
         <form method="post" id="tweet-form">
           <div class="input-container">
@@ -77,6 +78,7 @@
       <section id="tweets-container">
         
       </section>
+    </div>
       <div id="scroll-to-top-button" class="scroll-button">
         <i class="fa-solid fa-circle-chevron-up"></i>
       </div>
