@@ -24,6 +24,10 @@ Look at the resizability!
 
 !["Resposive Design"](https://github.com/WillWSmith/tweeter/blob/master/public/images/README/responsive-design.gif)
 
+Aww look at that heart! Wait did you hear something?
+
+!["Heart click toggle"](https://github.com/WillWSmith/tweeter/blob/master/public/images/README/heart-click.gif)
+
 ## Dependencies
 
 - Express
