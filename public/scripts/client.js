@@ -3,7 +3,6 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-// Test / driver code (temporary). Eventually will get this from the server.
 $(document).ready(function() {
 const renderTweets = function(tweets) {
   const $tweetsContainer = $('#tweets-container');
@@ -41,7 +40,7 @@ const createTweetElement = function(tweet) {
           <span><i class="icon far fa-clock"></i> ${formattedTimestamp}</span>
         </div>
         <div class="footer-right">
-          <i class="icon far fa-heart"></i>
+          <i class="icon far fa-heart" id="heart-icon"></i>
           <i class="fa-solid fa-retweet"></i>
           <i class="fa-regular fa-flag"></i>
         </div>
@@ -51,6 +50,18 @@ const createTweetElement = function(tweet) {
 
   return $tweet;
 };
+
+$(document).on('click', '#heart-icon', function() {
+  $(this).toggleClass('far fas');
+  $(this).toggleClass('bright-red', $(this).hasClass('fas'));
+  playSound();
+});
+ 
+function playSound() {
+  const audio = new Audio('/images/heart-sound.mp3');
+  audio.volume = 0.075;
+  audio.play();
+}
 
 renderTweets([]);
 
