@@ -59,7 +59,7 @@ nav span {
 }
 
 #tweets-container {
-  width: 100%;
+  width: 90%;
 }
 
 /* Desktop styles */
@@ -115,6 +115,7 @@ nav span {
     align-items: center;
     margin: 0;
     padding-top: 0;
+    width: 100%;
   }
 
   header.user-header {
@@ -128,7 +129,10 @@ nav span {
 
   .new-tweet {
     width: 90%;
-    max-width: 1200px;
     margin: 0 auto;
+  }
+
+  #tweets-container {
+    width: 100%;
   }
 }
