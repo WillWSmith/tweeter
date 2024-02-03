@@ -43,6 +43,7 @@ nav span {
   background-color: inherit;
   padding-top: 80px;
   display: flex;
+  flex-direction: row;
   align-items: center;
 }
 
@@ -79,7 +80,7 @@ nav span {
 
   .container {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: space-between;
     margin-left: 2em;
   }
@@ -88,6 +89,7 @@ nav span {
     flex-basis: 30%;
     align-self: flex-start;
     margin-top: 3.5em;
+    margin-right: 1em;
   }
   .tweets-container-wrapper,
   .new-tweet {
