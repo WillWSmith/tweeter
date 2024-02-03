@@ -100,15 +100,12 @@ footer .footer-right i {
   color: rgb(99, 99, 235);
   margin-right: 5px;
   font-size: 1.5em;
+  cursor: pointer;
 }
 
 footer .footer-right i:hover {
   color: darkred;
   margin-right: 5px;
-}
-
-footer .icon.far.fa-heart {
-  color: rgb(99, 99, 235);
 }
 
 footer .icon.fas.fa-heart {
